@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Main-Background-Color: #fff;
+    --Hero-Sec-Btn-Color: #664efc;
+    --Anchor-Link-Color: #2604f9;
+    --T-Heading-Color: #000;
+    --T-P-Color: #555555;
+    --T-Font-Family: 'DM Sans', sans-serif;
+}
+.logo:hover {
+    cursor: pointer;
+}
+.main-header {
+    margin: 50px 10% 100px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: var(--T-Font-Family);
+}
+.hamburger-img {
+    width: 80px;
+    display: none;
+}
+.hamburger-img:hover {
+    transform: translateY(-2px);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.hamburger-img:active {
+    transform: translateY(2px);
+}
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    gap: 1.3rem;
+}
+.nav-li {
+    list-style: none;
+    color: var(--T-Heading-Color);
+    font-size: 15px;
+    text-decoration: none;
+}
+.nav-li:hover {
+    transform: translateY(-1px);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.nav-li:active {
+    transform: translateY(2px);
+}
+.header-nav-btn {
+    background-color: var(--Hero-Sec-Btn-Color);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: var(--Main-Background-Color);
+    font-weight: 700;
+    font-family: var(--T-Font-Family);
+    font-size: 15px;
+}
+.header-nav-btn:hover {
+    transform: translateY(-2px);
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+.header-nav-btn:active {
+    transform: translateY(2px);
+}
+.header-btn-p {
+    display: inline;
+    color: var(--Main-Background-Color);
+    font-weight: 400;
+}
+@media (max-width: 760px) {
+    nav {
+        transition: all .4s ease-in-out;
+    }
+    .hamburger-img {
+        display: block;
+    }
+    .header-nav {
+        display: none;
+    }
+    .nav-ul {
+        flex-direction: column;
+        margin: 35px 0 35px 0;
+    }
+    .header-nav.active {
+        background-image: radial-gradient(at top left, #ebcbf7 0%, #f9e9ec 12%, #fdfcf9 30%);
+        border-radius: 20px;
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+@media (max-width: 1490px) {
+    .main-header {
+        margin: 40px 5% 100px 5%;
+    }
+}
+@media (max-width: 760px) {
+    .main-header {
+        margin: 40px 3% 100px 3%;
+    }
+}
+.active {
+    display: block;
+}
